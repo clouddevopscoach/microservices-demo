@@ -6,6 +6,8 @@ spec:
   template:
     metadata:
       name: app
+      labels:
+        type: front-end
     spec:
       containers:
       - name: app
@@ -20,4 +22,4 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: app
+      type: front-end
